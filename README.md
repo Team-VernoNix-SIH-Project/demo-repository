@@ -1,8 +1,8 @@
 # PROJECTSYNC AI
 
-### Intelligent Data Capture & Schedule-Linking Layer for Infrastructure Project Management
+## Intelligent Data Capture & Schedule-Linking Layer for Infrastructure Project Management
 
->![SIH 2026](https://img.shields.io/badge/Smart%20India%20Hackathon-2026-blue)
+![SIH 2026](https://img.shields.io/badge/Smart%20India%20Hackathon-2026-blue)
 ![SIH26122](https://img.shields.io/badge/Problem%20Statement-SIH26122-orange)
 ![Oil India Limited](https://img.shields.io/badge/Sponsor-Oil%20India%20Limited-success)
 ![Status](https://img.shields.io/badge/Status-Prototype-yellow)
