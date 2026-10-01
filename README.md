@@ -14,11 +14,9 @@ It converts DPRs, field reports, spreadsheets, and Time Agent inputs into struct
 ---
 
 ## Problem
-
 Infrastructure projects generate execution data through multiple disconnected sources such as DPRs, spreadsheets, site reports, and supervisor updates.
 
 Common problems include:
-
 - Fragmented field data
 - Terminology mismatch
 - Manual activity matching
@@ -30,9 +28,7 @@ Common problems include:
 ---
 
 ## Solution
-
 PROJECTSYNC AI creates a bridge between **Project Planning** and **Field Execution**.
-
 ```text
 Project Schedule
       ↓
@@ -58,13 +54,12 @@ Delay / Risk / Impact
 ---
 
 ## Core Features
-
 ### Schedule Intelligence
 - L1-L6 activity hierarchy
 - Schedule and activity management
 - Activity dependencies
 - Planned vs actual tracking
-
+- 
 ### AI Intelligence
 - Field report understanding
 - Information extraction
@@ -94,7 +89,6 @@ Delay / Risk / Impact
 ---
 
 ## L1-L6 Schedule Hierarchy
-
 ```text
 L1 Project
  └── L2 Area
@@ -107,7 +101,6 @@ L1 Project
 ---
 
 ## AI Pipeline
-
 ```text
 Field Data
     ↓
@@ -135,16 +128,13 @@ AI handles interpretation and matching, while deterministic logic handles calcul
 ---
 
 ## Example
-
 ### Field Report
-
 ```text
 Line 24 spool erection completed.
 12 spools installed today.
 ```
 
 ### AI Extraction
-
 ```text
 Discipline: Piping
 Line: 24
@@ -153,7 +143,6 @@ Quantity: 12
 ```
 
 ### Match
-
 ```text
 PIP-104 — Erect Line 24 Spools
 
@@ -166,7 +155,6 @@ Confidence: 94%
 ```
 
 ### Result
-
 ```text
 Execution Event
       ↓
@@ -180,9 +168,7 @@ Schedule Impact
 ---
 
 ## Human-in-the-Loop
-
 AI suggestions are not automatically treated as project truth.
-
 ```text
 AI Suggestion
       ↓
@@ -204,7 +190,6 @@ This keeps critical project updates traceable and controllable.
 ---
 
 ## System Architecture
-
 ```text
 Frontend
    ↓
@@ -218,7 +203,6 @@ Verified Project Intelligence
 ```
 
 ### Technology Stack
-
 - **Frontend:** Next.js, React, TypeScript, Tailwind CSS
 - **Backend:** Python, FastAPI
 - **Database:** PostgreSQL, pgvector
@@ -229,7 +213,6 @@ Verified Project Intelligence
 ---
 
 ## Project Structure
-
 ```text
 PROJECTSYNC-AI/
 ├── frontend/
@@ -245,16 +228,13 @@ PROJECTSYNC-AI/
 ---
 
 ## Setup
-
 ### Clone
-
 ```bash
 git clone <REPOSITORY_URL>
 cd <REPOSITORY_NAME>
 ```
 
 ### Frontend
-
 ```bash
 cd frontend
 npm install
@@ -262,26 +242,22 @@ npm run dev
 ```
 
 ### Backend
-
 ```bash
 cd backend
 python -m venv venv
 ```
 
 Windows:
-
 ```bash
 venv\Scripts\activate
 ```
 
 Install dependencies:
-
 ```bash
 pip install -r requirements.txt
 ```
 
 Run:
-
 ```bash
 uvicorn main:app --reload
 ```
@@ -289,9 +265,7 @@ uvicorn main:app --reload
 ---
 
 ## Environment Variables
-
 Create `.env` from `.env.example`.
-
 ```env
 DATABASE_URL=
 AI_API_KEY=
@@ -305,7 +279,6 @@ Never commit real API keys or credentials.
 ---
 
 ## Project Vision
-
 ```text
 PLAN
  ↓
@@ -325,15 +298,12 @@ ACT
 ```
 
 ### PROJECTSYNC AI
-
 **From fragmented field execution to trusted, schedule-linked project intelligence.**
 
 ---
 
 ## Team
-
 **Team-VernoNix**
-
 **Smart India Hackathon 2026**  
 **Problem ID: SIH26122**  
 **Organization: Oil India Limited**
