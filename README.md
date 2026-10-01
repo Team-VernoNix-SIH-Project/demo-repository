@@ -1,94 +1,51 @@
-# PROJECTSYNC AI
+# NEXUS — Planning-to-Execution Bridge
 
-## Intelligent Data Capture & Schedule-Linking Layer for Infrastructure Project Management
-
+> AI-powered infrastructure project progress tracking and schedule-linking platform.
+> 
 ![SIH 2026](https://img.shields.io/badge/Smart%20India%20Hackathon-2026-blue)
 ![SIH26122](https://img.shields.io/badge/Problem%20Statement-SIH26122-orange)
 ![Oil India Limited](https://img.shields.io/badge/Sponsor-Oil%20India%20Limited-success)
 ![Status](https://img.shields.io/badge/Status-Prototype-yellow)
 
-PROJECTSYNC AI is an AI-powered planning-to-execution intelligence platform that connects structured project schedules with real-world field execution data.
+## About
+NEXUS is our solution for **Smart India Hackathon 2026 — SIH26122**, sponsored by **Oil India Limited**.
+The idea is simple: connect the **project schedule** with what is actually happening at the construction site.
+Project schedules contain structured information such as activities, dates, quantities and dependencies. Field teams, on the other hand, provide progress through daily reports, PDFs, spreadsheets and supervisor updates.
 
-It converts DPRs, field reports, spreadsheets, and Time Agent inputs into structured **Execution Events**, matches them with **L5/L6 schedule activities**, provides confidence and explanations, and enables human verification before updating project progress.
-
+NEXUS connects these two sources using AI.
 ---
 
-## Problem
-Infrastructure projects generate execution data through multiple disconnected sources such as DPRs, spreadsheets, site reports, and supervisor updates.
-
-Common problems include:
-- Fragmented field data
-- Terminology mismatch
-- Manual activity matching
-- Delayed progress updates
-- Low data quality
-- Limited traceability
-- Difficulty identifying downstream delays
-
----
-
-## Solution
-PROJECTSYNC AI creates a bridge between **Project Planning** and **Field Execution**.
+## How It Works
 ```text
-Project Schedule
-      ↓
-Field Report / DPR
-      ↓
-AI Extraction
-      ↓
-Execution Event
-      ↓
-L5/L6 Activity Matching
-      ↓
-Confidence + Explanation
-      ↓
-Human Verification
-      ↓
-Verified Progress
-      ↓
-Planned vs Actual
-      ↓
-Delay / Risk / Impact
+PROJECT SCHEDULE
+       ↓
+L1–L6 ACTIVITY TREE
+       ↓
+FIELD REPORT
+       ↓
+AI EXTRACTION
+       ↓
+EXECUTION EVENT
+       ↓
+ACTIVITY MATCHING
+       ↓
+CONFIDENCE SCORE
+       ↓
+HUMAN REVIEW / AUTO APPROVAL
+       ↓
+VERIFIED PROGRESS
+       ↓
+PLANNED vs ACTUAL
+       ↓
+DELAY & RISK
+       ↓
+EVIDENCE + AUDIT
+       ↓
+DASHBOARD
 ```
 
----
-
-## Core Features
-### Schedule Intelligence
-- L1-L6 activity hierarchy
-- Schedule and activity management
-- Activity dependencies
-- Planned vs actual tracking
-- 
-### AI Intelligence
-- Field report understanding
-- Information extraction
-- Terminology normalization
-- Execution Event generation
-- Semantic activity matching
-- Confidence scoring
-- Explainable AI matching
-
-### Trust & Verification
-- Human-in-the-loop verification
-- Exception Center
-- Unmatched events
-- Conflict detection
-- Duplicate detection
-- Stale-data detection
-
-### Project Intelligence
-- Progress tracking
-- Schedule variance
-- Delay detection
-- Dependency impact
-- Risk identification
-- Evidence lineage
-- Audit history
-
----
-
-## L1-L6 Schedule Hierarchy
+## L1–L6 Structure
+NEXUS uses a six-level project hierarchy:
 ```text
 L1 Project
  └── L2 Area
@@ -98,212 +55,221 @@ L1 Project
                      └── L6 Sub-Activity
 ```
 
----
-
-## AI Pipeline
-```text
-Field Data
-    ↓
-Information Extraction
-    ↓
-Normalization
-    ↓
-Execution Event
-    ↓
-Candidate Retrieval
-    ↓
-Semantic Matching
-    ↓
-Confidence
-    ↓
-Explanation
-    ↓
-Rule Validation
-    ↓
-Human Review
+### Example:
+A supervisor submits:
 ```
-
-AI handles interpretation and matching, while deterministic logic handles calculations, dependencies, thresholds, permissions, state changes, and audit records.
-
----
-
-## Example
-### Field Report
-```text
 Line 24 spool erection completed.
 12 spools installed today.
 ```
-
-### AI Extraction
-```text
-Discipline: Piping
-Line: 24
-Event: Spool Erection
-Quantity: 12
+NEXUS extracts:
+```
+Discipline : Piping
+Line       : 24
+Event      : Spool Erection
+Status     : Completed
+Quantity   : 12
+```
+It then compares the report with schedule activities:
+```
+PIP001 — Erect Line 24       94%
+PIP002 — Weld Line 24        51%
+PIP003 — Hydro Test Line 24  18%
+```
+The system can also explain the match:
+```
+✓ Line number matched
+✓ Discipline matched
+✓ Event type matched
+✓ Activity wording matched
+✓ Date compatible
 ```
 
-### Match
-```text
-PIP-104 — Erect Line 24 Spools
-
-Confidence: 94%
-
-✓ Line matches
-✓ Discipline matches
-✓ Event type matches
-✓ Location matches
+### Confidence & Human Review
+NEXUS does not blindly accept every AI result.
 ```
+≥90%     → Auto Approve
+70–89%   → Human Review
+<70%     → Unmatched
+```
+For uncertain results, the planner can:
+* Approve
+* Change the activity
+* Reject
+* Mark as unmatched
+This keeps the human planner in control.
 
-### Result
-```text
-Execution Event
-      ↓
-Verified Activity
-      ↓
+### Progress & Risk
+After a match is verified, the system can update:
+* Actual start
+* Actual finish
+* Actual quantity
+* Progress %
+It then compares planned and actual execution.
+```
+Planned Finish : 15 Sept
+Actual Finish  : 17 Sept
+Variance       : +2 Days`
+```
+NEXUS can identify:
+* Delayed activities
+* At-risk activities
+* Critical milestones
+* Dependency risks
+* Stale information
+* Conflicting reports
+* Duplicate reports
+
+### Evidence & Audit
+Every important progress update can be connected back to its source:
+```
+Activity
+   ↓
 Progress Update
-      ↓
-Schedule Impact
-```
-
----
-
-## Human-in-the-Loop
-AI suggestions are not automatically treated as project truth.
-```text
-AI Suggestion
-      ↓
-Confidence
-      ↓
-Explanation
-      ↓
-Validation
-      ↓
- ┌────┴────┐
- ↓         ↓
-Verified  Review
-           ↓
-       Human Decision
-```
-
-This keeps critical project updates traceable and controllable.
-
----
-
-## System Architecture
-```text
-Frontend
    ↓
-API / Backend
+Field Report
    ↓
-AI Processing + Business Logic
-   ↓
-PostgreSQL / Storage
-   ↓
-Verified Project Intelligence
+Evidence
 ```
+The audit trail records important changes such as:
+* Previous value
+* New value
+* Source report
+* Timestamp
+* User
+* Approval status
+* AI confidence
 
-### Technology Stack
-- **Frontend:** Next.js, React, TypeScript, Tailwind CSS
-- **Backend:** Python, FastAPI
-- **Database:** PostgreSQL, pgvector
-- **AI:** LLM + Embeddings
-- **Processing:** PyMuPDF, pandas, openpyxl
-- **Infrastructure:** Docker / Supabase
+### Key Features
+* Schedule import from Excel/CSV
+* L1–L6 activity hierarchy
+* Field report ingestion
+* AI information extraction
+* AI schedule activity matching
+* Explainable confidence scores
+* Human review queue
+* Unmatched report handling
+* Actual progress tracking
+* Planned vs actual comparison
+* Delay detection
+* Dependency analysis
+* Evidence-linked progress
+* Audit history
+* Data quality monitoring
+* Conflict and duplicate detection
+* CAD/drawing progress visualization
 
----
-
-## Project Structure
-```text
-PROJECTSYNC-AI/
-├── frontend/
-├── backend/
-├── data/
-├── tests/
-├── docs/
-├── .env.example
-├── docker-compose.yml
-└── README.md
-```
-
----
-
-## Setup
-### Clone
-```bash
-git clone <REPOSITORY_URL>
-cd <REPOSITORY_NAME>
-```
-
+## Technology Stack
 ### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
+* Next.js
+* React
+* Tailwind CSS
+* shadcn/ui
+### Backend & Database
+* Supabase
+* PostgreSQL
+* Supabase Storage
+### AI
+* Gemini API
+### Visualization
+* Recharts
+### Deployment
+* Vercel
+### Architecture
+```
+Excel / CSV Schedule
+        │
+        ▼
+ Schedule Engine
+        │
+        ▼
+   L1–L6 Activities
+        │
+        │
+Field Reports ──→ AI Extraction
+                       │
+                       ▼
+                Execution Event
+                       │
+                       ▼
+                Activity Matching
+                       │
+                       ▼
+                Confidence Score
+                       │
+              ┌────────┼────────┐
+              ▼        ▼        ▼
+             Auto    Review   Unmatched
+              │        │        │
+              └────────┼────────┘
+                       ▼
+                Verified Progress
+                       │
+                       ▼
+                 Risk Analysis
+                       │
+                       ▼
+              Evidence + Audit
+                       │
+                       ▼
+                   Dashboard
 ```
 
-### Backend
-```bash
-cd backend
-python -m venv venv
+## AI vs Application Logic
+### AI handles
+* Understanding field reports
+* Information extraction
+* Semantic activity matching
+* Match explanations
+* Natural-language explanations
+### Application logic handles
+* Date calculations
+* Progress calculations
+* Variance
+* Dependency calculations
+* Delay rules
+* Database updates
+* Audit records
+
+### Project Status
+NEXUS is being developed as a **Smart India Hackathon 2026 prototype.**
+Our main focus is to make the complete workflow reliable:
+```
+SCHEDULE
+   ↓
+FIELD REPORT
+   ↓
+AI EXTRACTION
+   ↓
+L5/L6 MATCH
+   ↓
+CONFIDENCE
+   ↓
+HUMAN VALIDATION
+   ↓
+PROGRESS UPDATE
+   ↓
+DELAY / RISK
+   ↓
+EVIDENCE
+   ↓
+DASHBOARD
 ```
 
-Windows:
-```bash
-venv\Scripts\activate
-```
+### Team
+**Team VeryoNix**
 
-Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+**Smart India Hackathon 2026**
 
-Run:
-```bash
-uvicorn main:app --reload
-```
+**Problem Statement:** SIH26122
 
----
+**Sponsor:** Oil India Limited
 
-## Environment Variables
-Create `.env` from `.env.example`.
-```env
-DATABASE_URL=
-AI_API_KEY=
-SUPABASE_URL=
-SUPABASE_ANON_KEY=
-JWT_SECRET=
-```
+**Track:** Software
 
-Never commit real API keys or credentials.
+**Theme:** Smart Automation
 
----
+### Core Idea
+**NEXUS connects planned project schedules with real-world site execution by turning field reports into verified schedule updates and actionable project intelligence.**
 
-## Project Vision
-```text
-PLAN
- ↓
-FIELD
- ↓
-UNDERSTAND
- ↓
-MATCH
- ↓
-VERIFY
- ↓
-UPDATE
- ↓
-IMPACT
- ↓
-ACT
-```
-
-### PROJECTSYNC AI
-**From fragmented field execution to trusted, schedule-linked project intelligence.**
-
----
-
-## Team
-**Team-VernoNix**
-**Smart India Hackathon 2026**  
-**Problem ID: SIH26122**  
-**Organization: Oil India Limited**
+This is the version I would use for the GitHub repository: **short enough to scan quickly, but complete enough for a judge, mentor, recruiter, or developer to understand the project.**
+ 
