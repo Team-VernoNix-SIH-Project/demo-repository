@@ -413,11 +413,11 @@ EVIDENCE
 DASHBOARD
 ```
 
-### Team
-**Team VeryoNix**
-
 ### Core Idea
 **PlnEX connects planned project schedules with real-world site execution by turning field reports into verified schedule updates and actionable project intelligence.**
 
 This is the version I would use for the GitHub repository: **short enough to scan quickly, but complete enough for a judge, mentor, recruiter, or developer to understand the project.**
- 
+
+### Team
+**Team VeryoNix**
+
