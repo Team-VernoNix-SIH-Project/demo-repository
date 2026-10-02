@@ -1,4 +1,4 @@
-# NEXUS — Planning-to-Execution Bridge
+# PlnEX — Planning-to-Execution Bridge
 
 > AI-powered infrastructure project progress tracking and schedule-linking platform.
 > 
@@ -8,11 +8,11 @@
 ![Status](https://img.shields.io/badge/Status-Prototype-yellow)
 
 ## About
-NEXUS is our solution for **Smart India Hackathon 2026 — SIH26122**, sponsored by **Oil India Limited**.
+PlnEX is our solution for **Smart India Hackathon 2026 — SIH26122**, sponsored by **Oil India Limited**.
 The idea is simple: connect the **project schedule** with what is actually happening at the construction site.
 Project schedules contain structured information such as activities, dates, quantities and dependencies. Field teams, on the other hand, provide progress through daily reports, PDFs, spreadsheets and supervisor updates.
 
-NEXUS connects these two sources using AI.
+PlnEX connects these two sources using AI.
 ---
 
 ## How It Works
@@ -45,7 +45,7 @@ DASHBOARD
 ```
 
 ## L1–L6 Structure
-NEXUS uses a six-level project hierarchy:
+PlnEX uses a six-level project hierarchy:
 ```text
 L1 Project
  └── L2 Area
@@ -61,7 +61,7 @@ A supervisor submits:
 Line 24 spool erection completed.
 12 spools installed today.
 ```
-NEXUS extracts:
+PlnEX extracts:
 ```
 Discipline : Piping
 Line       : 24
@@ -85,7 +85,7 @@ The system can also explain the match:
 ```
 
 ### Confidence & Human Review
-NEXUS does not blindly accept every AI result.
+PlnEX does not blindly accept every AI result.
 ```
 ≥90%     → Auto Approve
 70–89%   → Human Review
@@ -110,7 +110,7 @@ Planned Finish : 15 Sept
 Actual Finish  : 17 Sept
 Variance       : +2 Days`
 ```
-NEXUS can identify:
+PlnEX can identify:
 * Delayed activities
 * At-risk activities
 * Critical milestones
@@ -231,7 +231,7 @@ Field Reports ──→ AI Extraction
 * Audit records
 
 ### Project Status
-NEXUS is being developed as a **Smart India Hackathon 2026 prototype.**
+PlnEX is being developed as a **Smart India Hackathon 2026 prototype.**
 Our main focus is to make the complete workflow reliable:
 ```
 SCHEDULE
@@ -269,7 +269,7 @@ DASHBOARD
 **Theme:** Smart Automation
 
 ### Core Idea
-**NEXUS connects planned project schedules with real-world site execution by turning field reports into verified schedule updates and actionable project intelligence.**
+**PlnEX connects planned project schedules with real-world site execution by turning field reports into verified schedule updates and actionable project intelligence.**
 
 This is the version I would use for the GitHub repository: **short enough to scan quickly, but complete enough for a judge, mentor, recruiter, or developer to understand the project.**
  
