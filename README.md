@@ -268,7 +268,6 @@ Erect Line 24-XX
 ---
 
 ## What-if Simulator
-This is another major feature from the report that should be visible in the README. The report specifically describes deterministic dependency-based simulation. :contentReference[oaicite:5]{index=5}
 
 ### What-if Analysis
 Project managers can simulate schedule changes and inspect potential downstream effects.
