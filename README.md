@@ -385,7 +385,6 @@ The dashboard is the visualization layer around this execution-to-schedule bridg
 * Audit records
 
 ### Project Status
-PlnEX is being developed as a **Smart India Hackathon 2026 prototype.**
 Our main focus is to make the complete workflow reliable:
 ```
 SCHEDULE
