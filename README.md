@@ -416,16 +416,6 @@ DASHBOARD
 ### Team
 **Team VeryoNix**
 
-**Smart India Hackathon 2026**
-
-**Problem Statement:** SIH26122
-
-**Sponsor:** Oil India Limited
-
-**Track:** Software
-
-**Theme:** Smart Automation
-
 ### Core Idea
 **PlnEX connects planned project schedules with real-world site execution by turning field reports into verified schedule updates and actionable project intelligence.**
 
