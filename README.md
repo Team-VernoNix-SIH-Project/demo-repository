@@ -267,10 +267,10 @@ Erect Line 24-XX
 ```
 ---
 
-## 6. What-if Simulator
+## What-if Simulator
 This is another major feature from the report that should be visible in the README. The report specifically describes deterministic dependency-based simulation. :contentReference[oaicite:5]{index=5}
 
-## What-if Analysis
+### What-if Analysis
 Project managers can simulate schedule changes and inspect potential downstream effects.
 Example:
 ```text
@@ -286,7 +286,7 @@ Final Milestone  +4 days
 
 ---
 
-## 7. Project Memory
+## Project Memory
 Your README should also include the report's institutional-memory concept. The purpose is not simply to archive old projects, but to make historical execution information queryable for future projects. :contentReference[oaicite:6]{index=6}
 
 ## Project Memory
