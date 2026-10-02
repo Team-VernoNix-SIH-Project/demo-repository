@@ -269,6 +269,7 @@ Erect Line 24-XX
 
 ## What-if Simulator
 Project managers can simulate schedule changes and inspect potential downstream effects.
+
 Example:
 ```text
 Foundation       +5 days
