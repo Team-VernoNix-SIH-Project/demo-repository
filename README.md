@@ -268,8 +268,6 @@ Erect Line 24-XX
 ---
 
 ## What-if Simulator
-
-### What-if Analysis
 Project managers can simulate schedule changes and inspect potential downstream effects.
 Example:
 ```text
@@ -284,9 +282,6 @@ Final Milestone  +4 days
 
 
 ---
-
-## Project Memory
-Your README should also include the report's institutional-memory concept. The purpose is not simply to archive old projects, but to make historical execution information queryable for future projects. :contentReference[oaicite:6]{index=6}
 
 ## Project Memory
 Completed projects can contribute structured historical knowledge to future planning.
