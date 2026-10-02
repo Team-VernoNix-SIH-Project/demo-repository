@@ -359,6 +359,7 @@ Imported schedules are normalized into a common activity structure containing in
 ## What Makes PlnEX Different
 PlnEX is not simply a project-management dashboard.
 Its core function is to connect:
+
 `Unstructured Field Execution`
 → `Structured Execution Event`
 → `Schedule Activity`
@@ -366,6 +367,7 @@ Its core function is to connect:
 → `Actual Progress`
 → `Variance`
 → `Impact`
+
 The dashboard is the visualization layer around this execution-to-schedule bridge.
 
 ## AI vs Application Logic
