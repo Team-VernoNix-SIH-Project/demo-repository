@@ -335,6 +335,7 @@ The model can support:
 - One execution event → one activity
 - Multiple execution events → one activity
 - One execution event → multiple activities
+
 This helps handle real-world differences between field-level reporting and schedule-level planning.
 
 ## Schedule Data Sources
