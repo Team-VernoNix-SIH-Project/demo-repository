@@ -213,6 +213,164 @@ Field Reports ──→ AI Extraction
                        ▼
                    Dashboard
 ```
+## Schedule Twin
+PlnEX provides a Plan vs Reality view for schedule activities.
+
+| Planned | Actual |
+|---|---|
+| Planned Start | Actual Start |
+| Planned Finish | Actual Finish |
+| Planned Quantity | Actual Quantity |
+| Planned Duration | Actual Duration |
+The resulting variance gives project teams a direct view of what was planned versus what actually happened.
+
+## Delay Impact Analysis
+PlnEX can trace the downstream impact of delayed activities.
+Example:
+`Foundation Delay`
+→ `Equipment Installation Delay`
+→ `Piping Delay`
+→ `Electrical Delay`
+→ `Milestone Delay`
+Instead of only identifying a delayed activity, the system helps explain how the delay propagates through project dependencies.
+
+## Schedule Health
+The platform can provide a transparent Schedule Health indicator based on measurable project signals such as:
+- Schedule performance
+- Milestone performance
+- Progress variance
+- Open risks
+- Data quality
+Each score can be broken down to show why the overall health changed.
+
+## Data Quality
+PlnEX monitors not only project progress but also the quality of the information used to calculate that progress.
+Quality signals include:
+- Completeness
+- Timeliness
+- Evidence coverage
+- Schedule-linking coverage
+- Consistency
+This helps distinguish project progress from the reliability of the underlying progress information.
+
+## Granularity Bridge
+Field execution and project schedules may describe the same work at different levels of detail.
+For example:
+```text
+Schedule Activity
+Erect Line 24-XX
+        │
+        ├── Spool A
+        ├── Spool B
+        ├── Spool C
+        └── Spool D
+```
+---
+
+## 6. What-if Simulator
+This is another major feature from the report that should be visible in the README. The report specifically describes deterministic dependency-based simulation. :contentReference[oaicite:5]{index=5}
+
+## What-if Analysis
+Project managers can simulate schedule changes and inspect potential downstream effects.
+Example:
+```text
+Foundation       +5 days
+      ↓
+Equipment        +3 days
+      ↓
+Piping           +3 days
+      ↓
+Final Milestone  +4 days
+```
+
+
+---
+
+## 7. Project Memory
+Your README should also include the report's institutional-memory concept. The purpose is not simply to archive old projects, but to make historical execution information queryable for future projects. :contentReference[oaicite:6]{index=6}
+
+## Project Memory
+Completed projects can contribute structured historical knowledge to future planning.
+Project Memory can preserve:
+- Delay causes
+- Historical activity variance
+- Activity duration patterns
+- Dependency-related delays
+- Execution history
+- Recurring project issues
+This turns completed-project information into reusable institutional knowledge rather than a static archive.
+
+## Offline Field Workflow
+Field updates can be designed for environments with limited connectivity.
+The workflow is:
+`Record → Store Locally → Capture Evidence → Connectivity Restored → Synchronize`
+Field information can include:
+- Progress updates
+- Photos
+- Timestamps
+- Location information
+This allows field execution data to be captured without requiring continuous network connectivity.
+
+## One-Click Daily Update
+The field workflow is designed to minimize manual data entry:
+`Select Project → Select Task → Start / Complete → Add Evidence → Submit`
+For conversational workflows, a short natural-language or voice update can also be converted into a structured execution event.
+
+## Field Data Sources
+PlnEX can support multiple forms of field execution input:
+- Daily progress reports
+- Spreadsheets
+- Site diaries
+- Scanned documents / PDFs
+- Mobile field updates
+- Conversational or voice input
+These inputs are converted into structured execution events before being linked to schedule activities.
+
+## Unmatched Execution Events
+When an execution event cannot be reliably linked to an existing activity, PlnEX does not silently update the schedule.
+The event can be routed to a review queue where the planner can:
+- Select an existing activity
+- Create a new activity
+- Reject the event
+- Leave it unmatched for later review
+
+## Flexible Activity Mapping
+PlnEX uses an intermediate execution-event layer so field execution does not have to map directly to exactly one schedule activity.
+The model can support:
+- One execution event → one activity
+- Multiple execution events → one activity
+- One execution event → multiple activities
+This helps handle real-world differences between field-level reporting and schedule-level planning.
+
+## Schedule Data Sources
+Supported schedule inputs can include:
+- Primavera exports
+- MS Project exports
+- Excel
+- CSV
+Imported schedules are normalized into a common activity structure containing information such as:
+- Activity ID
+- Activity Name
+- WBS Level
+- Discipline
+- Planned Start
+- Planned Finish
+- Duration
+- Predecessors
+- Quantity
+- Unit
+
+## What Makes PlnEX Different
+PlnEX is not simply a project-management dashboard.
+Its core function is to connect:
+`Unstructured Field Execution`
+→ `Structured Execution Event`
+→ `Schedule Activity`
+→ `Verification`
+→ `Actual Progress`
+→ `Variance`
+→ `Impact`
+The dashboard is the visualization layer around this execution-to-schedule bridge.
 
 ## AI vs Application Logic
 ### AI handles
